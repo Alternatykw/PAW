@@ -1,0 +1,30 @@
+[
+  {
+    "quantity": 1,
+    "price": 4.99,
+    "name": "mleko",
+    "description": "laciate",
+    "id": "1"
+  },
+  {
+    "quantity": 1,
+    "price": 4.99,
+    "name": "mleko",
+    "description": "jakies inne",
+    "id": "2"
+  },
+  {
+    "quantity": 1,
+    "price": 14.99,
+    "name": "kawa",
+    "description": "nescafe",
+    "id": "3"
+  },
+  {
+    "quantity": 1,
+    "price": 22.99,
+    "name": "kawa",
+    "description": "nescafe gold",
+    "id": "4"
+  }
+]

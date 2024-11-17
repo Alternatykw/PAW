@@ -1,0 +1,126 @@
+openapi: 3.0.0
+info:
+  title: Product List API
+  description: API to manage a list of products someone wants to buy.
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/Alternatykw/PAW/1.0.0
+  description: SwaggerHub API Auto Mocking
+paths:
+  /products:
+    get:
+      summary: Get all products
+      operationId: getAllProducts
+      responses:
+        "200":
+          description: A list of products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+                x-content-type: application/json
+      x-swagger-router-controller: Default
+    post:
+      summary: Add a new product to the list
+      operationId: addProduct
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+        required: true
+      responses:
+        "201":
+          description: Product created
+      x-swagger-router-controller: Default
+  /products/{productId}:
+    get:
+      summary: Get a single product by ID
+      operationId: getProductById
+      parameters:
+      - name: productId
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: A product
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        "404":
+          description: Product not found
+      x-swagger-router-controller: Default
+    put:
+      summary: Update a product by ID
+      operationId: updateProduct
+      parameters:
+      - name: productId
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+        required: true
+      responses:
+        "200":
+          description: Product updated
+        "404":
+          description: Product not found
+      x-swagger-router-controller: Default
+    delete:
+      summary: Delete a product by ID
+      operationId: deleteProduct
+      parameters:
+      - name: productId
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Product deleted
+        "404":
+          description: Product not found
+      x-swagger-router-controller: Default
+components:
+  schemas:
+    Product:
+      required:
+      - id
+      - name
+      - price
+      - quantity
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        price:
+          type: number
+          format: float
+        quantity:
+          type: integer
+      example:
+        quantity: 6
+        price: 0.8008282
+        name: name
+        description: description
+        id: id
