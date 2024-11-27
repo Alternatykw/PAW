@@ -6,6 +6,9 @@ const YAML = require('yamljs');
 const swaggerDocument = YAML.load('./api/openapi.yaml');
 
 const app = express();
+const cors = require('cors');
+
+app.use(cors());
 
 const dataFilePath = path.join(__dirname, 'data.json');
 
