@@ -26,12 +26,5 @@
     "price": 3.99,
     "description": "łaciate",
     "id": "1"
-  },
-  {
-    "name": "Karma dla psa",
-    "quantity": 2,
-    "price": 34.99,
-    "description": "favorit",
-    "id": "5"
   }
 ]

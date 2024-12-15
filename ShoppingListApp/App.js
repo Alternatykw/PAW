@@ -11,7 +11,6 @@ import {
   Platform,
 } from 'react-native';
 
-// Import functions from your API
 import { getProducts, addProduct, updateProduct, deleteProduct } from './api/productsApi';
 
 const App = () => {
