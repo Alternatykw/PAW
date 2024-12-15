@@ -1,10 +1,10 @@
-### Aplikacja została napisana przez:
+## Aplikacja została napisana przez:
 Mateusz 157794
 Kamil 157760
 
 Aplikacja funkcjonuje jako lista zakupów, produkty są zapisywane w pliku data.json.
 
-### Wykorzystane technologie:
+## Wykorzystane technologie:
 Front-End:
 -React Native
 -Expo
